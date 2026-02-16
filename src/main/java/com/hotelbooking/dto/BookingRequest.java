@@ -1,15 +1,20 @@
 package com.hotelbooking.dto;
 
+import java.time.LocalDate;
+
 public class BookingRequest {
 
     private GuestInfo guest;
     private int numberOfGuests;
     private RoomType roomType;
     private int nights;
+    private LocalDate checkInDate;
+    private LocalDate checkOutDate;
 
     public BookingRequest() {}
 
-    public BookingRequest(GuestInfo guest, int numberOfGuests, RoomType roomType, int nights) {
+    public BookingRequest(GuestInfo guest, int numberOfGuests, RoomType roomType, int nights,
+                          LocalDate checkInDate, LocalDate checkOutDate) {
         this.guest = guest;
         this.numberOfGuests = numberOfGuests;
         this.roomType = roomType;
@@ -46,5 +51,15 @@ public class BookingRequest {
 
     public void setNights(int nights) {
         this.nights = nights;
+    }
+
+    public LocalDate getCheckInDate() {
+        return checkInDate;
+    }public void setCheckInDate(LocalDate checkInDate) {
+        this.checkInDate = checkInDate;
+    }public LocalDate getCheckOutDate() {
+        return checkOutDate;
+    }public void setCheckOutDate(LocalDate checkOutDate) {
+        this.checkOutDate = checkOutDate;
     }
 }
